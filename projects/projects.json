@@ -1,0 +1,61 @@
+[{
+        "id": "p1",
+        "title": "Real-Time Customer Support Orchestrator",
+        "description": "A production-ready intelligent customer support system built using Agentic AI with LangGraph. It uses a supervisor-worker architecture, Retrieval-Augmented Generation (RAG) with ChromaDB, and conversation memory to deliver context-aware, human-like responses. The system intelligently routes queries, retrieves knowledge, generates customer-friendly replies, and escalates complex issues when needed.",
+        "tech": [
+            "Python",
+            "FastAPI",
+            "LangGraph",
+            "OpenAI GPT-4",
+            "ChromaDB",
+            "HuggingFace Embeddings",
+            "React",
+            "Docker"
+        ],
+        "repo": "https://github.com/AnirudhDambal/RT-cutomer-support-orchestrator",
+        "live": "",
+        "image": "../assets/customer-support-ai.png"
+    },
+    {
+        "id": "p2   ",
+        "title": "AI-Powered Learning Management System (LMS)",
+        "description": "A comprehensive Learning Management System enhanced with AI features such as automatic video transcription using Whisper, multi-language translation via Gemini, AI-generated notes, quizzes, and personalized learning recommendations. The platform supports role-based access (Student, Teacher, Admin), intelligent dashboards, and scalable video processing with a modern full-stack architecture.",
+        "tech": [
+            "Python",
+            "FastAPI",
+            "MongoDB",
+            "GridFS",
+            "Whisper",
+            "Gemini API",
+            "LangGraph",
+            "JWT",
+            "FFmpeg",
+            "Next.js",
+            "React",
+            "TypeScript",
+            "Tailwind CSS"
+        ],
+        "repo": "https://github.com/AnirudhDambal/smart-lms",
+        "live": "",
+        "image": "../assets/ai-lms.png"
+    },
+    {
+        "id": "p4",
+        "title": "Connectify - Social Media Platform (MERN)",
+        "description": "A full-stack social media application built using the MERN stack that enables users to connect, share posts, follow others, like and comment on content, and manage profiles securely. The platform features JWT-based authentication, role-protected APIs, real-time-like interactions, and a scalable REST API design.",
+        "tech": [
+            "MongoDB",
+            "Express.js",
+            "React",
+            "Node.js",
+            "JWT",
+            "REST API",
+            "Mongoose",
+            "Axios"
+        ],
+        "repo": "https://github.com/AnirudhDambal/Connectify",
+        "live": "",
+        "image": "../assets/connectify.png"
+    }
+
+]
