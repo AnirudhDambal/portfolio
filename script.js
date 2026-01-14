@@ -32,6 +32,15 @@ async function loadProjects() {
             repo.style.marginLeft = '8px';
 
             links.appendChild(repo);
+            if (p.live && p.live.trim() !== '') {
+                const live = document.createElement('a');
+                live.href = p.live;
+                live.textContent = 'Live';
+                live.target = '_blank';
+                live.style.marginLeft = '8px';
+
+                links.appendChild(live);
+            }
             meta.appendChild(tech);
             meta.appendChild(links);
 
@@ -65,4 +74,5 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         })
     })
+
 });
