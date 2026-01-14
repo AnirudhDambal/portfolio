@@ -54,8 +54,7 @@
             "Axios"
         ],
         "repo": "https://github.com/AnirudhDambal/Connectify",
-        "live": "",
+        "live": "https://connectify-plum.vercel.app/dashboard",
         "image": "../assets/connectify.png"
     }
-
 ]
