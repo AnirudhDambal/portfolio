@@ -1,146 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Anirudh Dambal - Portfolio</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap"
+            rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
-</head>
+        <!-- GSAP for Heavy Animations -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    </head>
 
-<body>
-    <header class="site-header">
-        <div class="header-inner">
-            <h1 class="name">Anirudh Dambal</h1>
-            <p class="tagline">CSE Graduate • KLE TECH University • Strong Problem Solver • Seeking Opportunities</p>
-        </div>
-        <nav class="top-nav">
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#experience" class="nav-link">Experience</a>
-            <a href="#projects" class="nav-link">Projects</a>
-        </nav>
-    </header>
+    <body>
+        <!-- Cursor Follower -->
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
 
-    <main class="container layout">
-        <aside class="left-card card">
-            <img class="avatar" src="./images/pf.png" alt="Anirudh Dambal">
-            <h2>Anirudh Dambal</h2>
-            <p class="muted">Computer Science Engineer • KLE TECH University , Hubbli </p>
-            <p class="muted"> CGPA : 9.24</p>
-            <p class="muted"> Semester : 8th</p>
-            <p class="small">Open to opportunities</p>
-            <div class="contact-quick">
-                <a href="mailto:anirudhdambalop@gmail.com">
-                    <i class="fa-solid fa-envelope"></i> anirudhdambalop@gmail.com
-                </a>
-
-                <a href="https://github.com/anirudhDambal" target="_blank">
-                    <i class="fa-brands fa-github"></i> GitHub
-                </a>
-
-                <a href="https://leetcode.com/u/Anirudh_Dambal/" target="_blank">
-                    <i class="fa-brands fa-leetcode"></i> Leetcode
-                </a>
-            </div>
-
-            <div class="resume-download">
-                <a class="btn" href="Anirudh Dambal_KLE TECH University.pdf" download>Download Resume</a>
-            </div>
-        </aside>
-
-        <section class="right-content">
-            <section id="about" class="card">
-                <h2>About</h2>
-                <p>I am a Computer Science graduate with strong problem-solving skills, experience in algorithms, data structures and web development. I enjoy building projects that demonstrate clear design and efficient solutions.</p>
-            </section>
-
-            <section id="skills" class="card skills-section">
-                <h2>Technical Skills</h2>
-
-                <h4>Languages:</h4>
-                <ul class="skills">
-                    <li><i class="fa-solid fa-code"></i> C++</li>
-                    <li><i class="fa-brands fa-python"></i> Python</li>
-                    <li><i class="fa-solid fa-code"></i> C</li>
-                    <li><i class="fa-brands fa-js"></i> JavaScript</li>
+        <header class="site-header">
+            <nav class="container">
+                <a href="#" class="logo">AD.</a>
+                <ul class="nav-links">
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#experience">Experience</a></li>
+                    <li><a href="#projects">Work</a></li>
+                    <li><a href="mailto:anirudhdambalop@gmail.com" class="btn-nav">Let's Talk</a></li>
                 </ul>
+                <div class="hamburger">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+            </nav>
+        </header>
 
-                <h4>Web Technologies:</h4>
-                <ul class="skills">
-                    <li><i class="fa-brands fa-html5"></i> HTML</li>
-                    <li><i class="fa-brands fa-css3-alt"></i> CSS</li>
-                    <li><i class="fa-brands fa-react"></i> React</li>
-                    <li><i class="fa-brands fa-node-js"></i> Node.js</li>
-                    <li><i class="fa-solid fa-bolt"></i> FastAPI</li>
-                    <li><i class="fa-solid fa-database"></i> MongoDB</li>
-                    <li><i class="fa-solid fa-database"></i> MySQL</li>
-                    <li><i class="fa-solid fa-server"></i> Express</li>
-                </ul>
+        <main>
+            <section id="hero" class="hero-section">
+                <div class="container hero-container">
+                    <div class="hero-content">
+                        <div class="overflow-hide">
+                            <h1 class="big-title hero-anim">Anirudh</h1>
+                        </div>
+                        <div class="overflow-hide">
+                            <h1 class="big-title hero-anim">Dambal<span class="dot">.</span></h1>
+                        </div>
 
-                <h4>Tools / Platforms:</h4>
-                <ul class="skills">
-                    <li><i class="fa-brands fa-git-alt"></i> Git</li>
-                    <li><i class="fa-brands fa-docker"></i> Docker</li>
-                    <li><i class="fa-solid fa-cubes"></i> Kubernetes</li>
-                    <li><i class="fa-solid fa-cloud"></i> Cloudinary</li>
-                    <li><i class="fa-solid fa-key"></i> JWT</li>
-                    <li><i class="fa-solid fa-table"></i> TablePlus</li>
-                    <li><i class="fa-solid fa-code"></i> VS Code</li>
-                    <li><i class="fa-solid fa-terminal"></i> Cursor</li>
-                    <li><i class="fa-solid fa-robot"></i> OpenAI</li>
+                        <div class="overflow-hide">
+                            <p class="subtitle hero-anim">Computer Science Engineer • Problem Solver • Developer</p>
+                        </div>
 
-                    <li><img src="https://ai.google.dev/_static/googledevai/images/gemini-api-logo.svg" class="fa-solid" alt="Gemini" class="skill-logo"> Gemini</li>
+                        <div class="hero-actions hero-anim">
+                            <a href="#projects" class="btn-primary">Selected Works</a>
+                            <a href="Anirudh Dambal_KLE TECH University.pdf" download class="btn-outline">Download
+                                Resume</a>
+                        </div>
 
-                </ul>
-            </section>
-
-
-            <section id="experience" class="card">
-                <h2>Experience</h2>
-                <div>
-                    <div class="experience-item">
-                        <h3>Project Intern</h3>
-                        <p class="experience-company">NVIDIA — Remote</p>
-                        <p class="experience-date">Oct 2024 – Jan 2025</p>
-                        <p class="experience-project-title">
-                            <strong>NVIDIA Project – Virtual Hardware Simulation & Code Analysis</strong>
-                        </p>
-                        <p class="experience-description">
-                            Developed a virtual environment to simulate hardware behaviour, enabling execution analysis, performance metric tracking, optimization insights, and improved code efficiency and resource utilization.
-                        </p>
+                        <div class="hero-socials-container hero-anim">
+                            <p class="social-label">Check my coding progress</p>
+                            <div class="hero-socials">
+                                <a href="mailto:anirudhdambalop@gmail.com" title="Email"><i class="fa-solid fa-envelope"></i></a>
+                                <a href="https://github.com/anirudhDambal" target="_blank" title="GitHub"><i class="fa-brands fa-github"></i></a>
+                                <a href="https://www.linkedin.com/in/anirudh-dambal-0a0a0a0a/" target="_blank" title="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                                <a href="https://leetcode.com/u/Anirudh_Dambal/" target="_blank" title="LeetCode"><i class="fa-solid fa-code"></i></a>
+                                <a href="https://codolio.com/profile/Anirudh_Dambal" target="_blank" title="Codolio"><i class="fa-solid fa-chart-simple"></i></a>
+                            </div>
+                        </div>
                     </div>
+                    <div class="hero-image">
+                        <div class="img-mask hero-anim">
+                            <!-- Swapped to a placeholder URL so you can see the design immediately. Change src="./images/pf.png" back when ready. -->
+                            <img src="./images/pf.png" alt="Anirudh Dambal">
+                        </div>
+                    </div>
+                </div>
+                <div class="scroll-indicator">
+                    <span>Scroll</span>
+                    <div class="line"></div>
+                </div>
+            </section>
 
-                    <div class="experience-item">
-                        <h3>Project Intern</h3>
-                        <p class="experience-company">NVIDIA — Remote</p>
-                        <p class="experience-date">Feb 2024 – May 2024</p>
-                        <p class="experience-project-title">
-                            <strong>NVIDIA Research Project – LLM Behaviour Analysis</strong>
-                        </p>
-                        <p class="experience-description">
-                            Researched the behaviour of Large Language Models (LLMs) in various interaction scenarios. Applied statistical methods to interpret data and derive meaningful insights.
-                        </p>
+            <section id="about" class="section">
+                <div class="container">
+                    <div class="split-layout">
+                        <div class="section-header" data-scroll>
+                            <span class="section-label">01 // Who I Am</span>
+                            <h2 class="section-title">Driven by logic,<br>fueled by code.</h2>
+                        </div>
+                        <div class="about-content" data-scroll>
+                            <p class="bio-text">
+                                I am a Computer Science graduate from KLE TECH University, Hubbli, with a strong
+                                foundation in algorithms, data structures, and modern web development. Currently in my
+                                8th semester with a <strong>CGPA of 9.24</strong>, I thrive on building efficient
+                                solutions and complex systems.
+                            </p>
+                            <div class="stats-grid">
+                                <div class="stat-item">
+                                    <span class="stat-icon"><i class="fa-solid fa-graduation-cap"></i></span>
+                                    <div>
+                                        <strong>CSE Graduate</strong>
+                                        <span>KLE Tech University</span>
+                                    </div>
+                                </div>
+                                <div class="stat-item">
+                                    <span class="stat-icon"><i class="fa-solid fa-location-dot"></i></span>
+                                    <div>
+                                        <strong>Based In</strong>
+                                        <span>Hubbli, India</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="social-row">
+                                <a href="https://github.com/anirudhDambal" target="_blank" class="social-link">Github <i
+                                        class="fa-solid fa-arrow-right-long"></i></a>
+                                <a href="https://leetcode.com/u/Anirudh_Dambal/" target="_blank"
+                                    class="social-link">Leetcode <i class="fa-solid fa-arrow-right-long"></i></a>
+                                <a href="mailto:anirudhdambalop@gmail.com" class="social-link">Email <i
+                                        class="fa-solid fa-arrow-right-long"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </section>
 
-            <section id="projects" class="card projects-section">
-                <h2>Projects</h2>
-                <div id="projects-grid" class="grid"></div>
+            <section id="achievements" class="section border-top">
+                <div class="container">
+                    <div class="section-header" data-scroll>
+                        <span class="section-label">STATS // CODING PROFILE</span>
+                        <h2 class="section-title">Achievements</h2>
+                    </div>
+                    <div class="achievements-grid" data-scroll>
+                        <div class="achievement-card">
+                            <div class="ach-number">703</div>
+                            <div class="ach-label">Total Questions Solved</div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ach-number">152</div>
+                            <div class="ach-label">Active Days</div>
+                        </div>
+                        <div class="achievement-card">
+                            <div class="ach-number">1,782</div>
+                            <div class="ach-label">LeetCode Rating</div>
+                        </div>
+
+                        <div class="achievement-card">
+                            <div class="ach-number">1652</div>
+                            <div class="ach-label">CodeChef Rating</div>
+                        </div>
+                    </div>
+                </div>
             </section>
 
+            <section id="skills" class="section border-top">
+                <div class="container">
+                    <div class="section-header center-aligned" data-scroll>
+                        <span class="section-label">02 // Capabilities</span>
+                        <h2 class="section-title">Technical Skills</h2>
+                        <p style="margin-bottom: 30px; color: #666;">Technologies and tools I work with</p>
+                    </div>
 
-        </section>
-    </main>
+                    <div class="skills-wrapper">
+                        <!-- Programming -->
+                        <div class="skill-category" data-scroll-item>
+                            <h3 class="cat-title">Programming</h3>
+                            <div class="tags">
+                                <span>Python</span>
+                                <span>JavaScript/TypeScript</span>
+                                <span>C/C++</span>
+                                <span>Dart</span>
+                            </div>
+                        </div>
 
-    <footer class="site-footer">
-        <small>© 2024 Anirudh Dambal — Open to opportunities</small>
-    </footer>
 
-    <script src="script.js"></script>
-</body>
+                        <!-- Backend -->
+                        <div class="skill-category" data-scroll-item>
+                            <h3 class="cat-title">Web Development</h3>
+                            <div class="tags">
+                                <span>React.js</span>
+                                <span>FastAPI</span>
+                                <span>Next.js</span>
+                                <span>Express.js</span>
+                                <span>Node.js</span>
+                            </div>
+                        </div>
 
+                        <!-- AI/ML -->
+                        <div class="skill-category" data-scroll-item>
+                            <h3 class="cat-title">AI/ML and Data Science</h3>
+                            <div class="tags">
+                                <span>Scikit-learn</span> <span>Pandas</span>
+                                <span>NumPy</span> <span>Matplotlib</span>
+
+                                <span>LangChain</span>
+                                <span>LangGraph</span>
+                                <span>LangSmith</span>
+                            </div>
+                        </div>
+
+
+                        <!-- Databases -->
+                        <div class="skill-category" data-scroll-item>
+                            <h3 class="cat-title">Databases</h3>
+                            <div class="tags">
+                                <span>MongoDB</span>
+                                <span>MySQL</span>
+                                <span>PostgreSQL</span>
+                                <span>Prisma</span>
+                            </div>
+                        </div>
+
+                        <!-- DevTools -->
+                        <div class="skill-category" data-scroll-item>
+                            <h3 class="cat-title">DevTools</h3>
+                            <div class="tags">
+                                <span>Git</span>
+                                <span>Docker</span>
+                                <span>Azure</span>
+                                <span>Vercel</span>
+                            </div>
+                        </div>
+
+                        <!-- Core CS -->
+                        <div class="skill-category" data-scroll-item>
+                            <h3 class="cat-title">Core CS Subjects</h3>
+                            <div class="tags">
+                                <span>Data Structures</span>
+                                <span>Algorithms</span>
+                                <span>O.S.</span>
+                                <span>DBMS</span>
+                                <span>Computer Networks</span>
+                                <span>System Design</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experience" class="section border-top">
+                <div class="container">
+                    <div class="section-header" data-scroll>
+                        <span class="section-label">03 // Career Path</span>
+                        <h2 class="section-title">Experience</h2>
+                    </div>
+
+                    <div class="timeline-v2">
+                        <div class="timeline-block" data-scroll-item>
+                            <div class="time-meta">
+                                <span class="date">Oct 2024 – Jan 2025</span>
+                                <span class="company">NVIDIA — Remote</span>
+                            </div>
+                            <div class="time-content">
+                                <h3 class="role">Project Intern</h3>
+                                <h4 class="project-name">Virtual Hardware Simulation & Code Analysis</h4>
+                            <p>
+                                Developed a Bytecode Analysis and Optimization Tool aimed at improving low-level program efficiency through simulation-driven insights and static analysis.
+                            </p>
+                            <br>
+                            <p>
+                                Designed and implemented a bytecode simulation module capable of emulating underlying hardware behavior, enabling accurate analysis of instruction execution patterns and performance bottlenecks. In parallel, built an optimization module that analyzed bytecode execution paths to identify redundant instructions, inefficient control flows, and optimization opportunities.
+                            </p>
+                            <br>
+                            <p>
+                                The system provided actionable optimization suggestions that resulted in up to a 35% improvement in execution efficiency, measured through reduced instruction cycles and improved runtime behavior.
+                            </p>
+                        </div>
+                        </div>
+
+
+
+
+                        <div class="timeline-block" data-scroll-item>
+                            <div class="time-meta">
+                                <span class="date">Feb 2024 – May 2024</span>
+                                <span class="company">NVIDIA — Remote</span>
+                            </div>
+                            <div class="time-content">
+                                <h3 class="role">Project Intern</h3>
+                                <h4 class="project-name">LLM Behaviour Analysis</h4>
+                                <p>
+                                    Worked on designing and implementing a structured approach for enabling Large Language Models (LLMs) to perform paired image comparison and perceptual quality assessment, with a specific focus on image sharpness evaluation.
+                                </p>
+                                <br>
+                                <p>
+                                    Led the development of a comparison-driven evaluation methodology where images are assessed in pairs rather than isolation, allowing the model to make relative judgments that better align with human perception. To support this, I designed a Preference Matrix framework that systematically captures pairwise rankings and comparative decisions across large image sets.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="projects" class="section border-top">
+                <div class="container">
+                    <div class="section-header" data-scroll>
+                        <span class="section-label">04 // Portfolio</span>
+                        <h2 class="section-title">Selected Projects</h2>
+                    </div>
+                    <!-- Projects Grid injected via JS -->
+                    <div id="projects-grid" class="projects-grid-v2"></div>
+                </div>
+            </section>
+        </main>
+
+        <footer class="site-footer">
+            <div class="container container-footer">
+                <div class="footer-cta" data-scroll>
+                    <div class="cta-content">
+                        <h2 class="megatext">Let's work<br>together.</h2>
+                        <a href="mailto:anirudhdambalop@gmail.com" class="cta-arrow-btn">
+                            <span class="cta-text">Get in Touch</span>
+                            <span class="cta-icon"><i class="fa-solid fa-arrow-right"></i></span>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        &copy; 2026 Anirudh Dambal. All Rights Reserved.
+                    </div>
+                    <div class="footer-socials">
+                        <a href="https://github.com/anirudhDambal" target="_blank">GT</a>
+                        <a href="https://leetcode.com/u/Anirudh_Dambal/" target="_blank">LC</a>
+                        <a href="#" target="_blank">LN</a>
+                    </div>
+                </div>
+            </div>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
 
 </html>
